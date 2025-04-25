@@ -38,7 +38,7 @@ void redGreen(int green, int yellow, int red) {  // this turns the red lights gr
   digitalWrite(red, LOW);
   digitalWrite(green, HIGH);
 }
-void pedGo(bool active) {
+void pedGo(bool active) { // adds a pedestrian button
   if (trafficWest == HIGH) {
     greenRed(westGreen, westYellow, westRed);
   } else {
@@ -88,7 +88,7 @@ void loop() {
       redGreen(eastGreen, eastYellow, eastRed);
     }
   }
-  if (digitalRead(ped) == HIGH) {
+  if (digitalRead(ped) == HIGH) {//sees if the pedestrian button has been pressed
     pedGo(HIGH);
     delay(2000);
     if (trafficWest == HIGH) {
