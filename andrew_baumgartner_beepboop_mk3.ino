@@ -17,7 +17,7 @@
 boolean trafficWest = true;
 int flowTime = 3000;
 int changeDelay = 2000;
-void weewoo(){
+void weewoo(){ // Makes the light change with haste
   if (trafficWest != true) {
       trafficWest = true;
       greenRed(eastGreen, eastYellow, eastRed);
